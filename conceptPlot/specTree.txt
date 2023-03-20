@@ -1,0 +1,1 @@
+('P. cvjetkovicii':0.223847,(((('P. commune':0.03886,'P. solitum':0.032132):0.005494,(('P. mb':0.013052,'P. polonicum':0.005086):0.021175,'P. verrucosum':0.040045):0.004422):0.033079,'P. chrysogenum':0.079855):0.1291,'P. brevicompactum ':0.266037):0.223847);

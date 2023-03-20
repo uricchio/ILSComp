@@ -1,0 +1,1 @@
+('Penicillium-cvjetkovicii-v1':0.223847,(((('Penicillium-commune-v1':0.03886,'Penicillium-solitum-v1':0.032132):0.005494,(('Penicillium-mb-v1':0.013052,'Penicillium-polonicum-v1':0.005086):0.021175,'Penicillium-verrucosum-v1':0.040045):0.004422):0.033079,'Penicillium-chrysogenum-v1':0.079855):0.1291,'Penicillium-brevicompactum-v1':0.266037):0.223847);
