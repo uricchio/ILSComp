@@ -24,7 +24,7 @@
 #python pValsReal.py > ../obsData/realPvalDist.txt
 
 # data for 5719
-python getDataForVis.py > ../obsData/corr.5719.txt
+#python getDataForVis.py > ../obsData/corr.5719.txt
 
 # not using any of this below anymore
 # Binary trait regression

@@ -1,0 +1,18 @@
+#CODE
+This software implements analyses in Louw et al 2023.
+
+The code requires DendroPy to run most of the analyses: https://dendropy.org/
+
+The source code is available in the src folder. You can install it by running "python setup.py install --user" from the command line.
+
+Once you've installed the source, the code in the scripts folder implements the analyses in the figures. The visualizations were made using ggplot and code for these is available in the conceptPlot folder. To rerun all the analyses, uncomment the lines in scripts/run_disc_sims.sh and rerun all the code. Note that this is not gauranteed to work without some modification as the filepaths to some of the data may be different on your machine. 
+
+#DATA
+Gene tree files are stored in obsData/Gene_Trees
+
+Sequence data is available in obsData/Single_Copy_Orthologue_Sequences
+
+RCC values (competitive index) are available in obsData/RCCdata.txt. We averaged the three replicates per pair for analyses in our study.
+
+Orthologs have ID numbers in the file names that correspond to the numbers in our manuscript.
+
