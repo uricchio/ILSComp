@@ -1,0 +1,1 @@
+(uniProt_taxonomy_id_500485_Pc16g04780:0.199804,(((uniProt_taxonomy_id_500485_Pc21g15800:0.474217,uniProt_taxonomy_id_500485_Pc08g00060:0.525643):0.273858,uniProt_taxonomy_id_500485_Pc16g03750:0.372317):0.03434,(uniProt_taxonomy_id_500485_Pc03g00210:0.440646,uniProt_taxonomy_id_500485_Pc22g00040:0.143958):0.165108):0.199804);

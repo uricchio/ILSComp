@@ -1,0 +1,1 @@
+(53503-Pc_singCopy_53503-Pc.00g010560.m01.polypeptide.OG0002745:0.0004565,((uniProt_taxonomy_id_500485_Pc16g13960:1.80761,uniProt_taxonomy_id_500485_Pc22g01750:0.838412)n2:0.618906,uniProt_taxonomy_id_500485_Pc21g09860:0.001549)n1:0.0004565)n0;

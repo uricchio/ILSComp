@@ -7,6 +7,7 @@ import numpy as np
 from scipy.stats import pearsonr
 from scipy.stats import linregress
 from scipy.stats import spearmanr
+from scipy.stats import percentileofscore
 from scipy.interpolate import interp1d
 from dendropy.simulate import treesim
 from dendropy.calculate import treecompare
@@ -401,3 +402,52 @@ class SimulateILS():
                     print(GTdists[j], trDist[j], str(node.taxon)[1:-1], STdists[j])
             break          
       
+    def getCorrPVals(self,nullDistFile='../obsData/corrPvalDist.txt',trueCorrCoeffFile='../obsData/realPvalDist.txt'):
+   
+        nullDist = {}   
+ 
+        # get null dist for each species
+        fh = open(nullDistFile, 'r')
+        for line in fh:
+            data = line.strip().split()
+            if data[0] not in nullDist:
+                nullDist[data[0]] = []
+            nullDist[data[0]].append(float(data[1]))
+
+        fh.close() 
+
+        dist = defaultdict(dict)
+        # for each gene tree, get real corr coeff
+        fh = open(trueCorrCoeffFile, 'r')
+        for line in fh:
+            data = line.strip().split()
+            dist[data[2]][data[3]] = float(data[0])       
+    
+        # for each corr coeff, compute quantile
+        percentiles = {}
+        gtOrder = {}
+        for spec in nullDist:
+            nullDist[spec] = sorted(nullDist[spec])
+            allCC = []
+            for gt in dist[spec]:
+                allCC.append([dist[spec][gt],gt])
+            allCC = sorted(allCC, key=lambda x: x[0])
+            i = 0
+            percentiles[spec] = []
+            
+            gtOrder[spec] = []
+            while allCC:
+                if len(nullDist[spec]) > i and nullDist[spec][i] < allCC[0][0]:
+                    i += 1
+                    continue
+                elif len(nullDist[spec]) <= i:
+                    for item in allCC:
+                        percentiles[spec].append(0.)
+                        gtOrder[spec].append(item[1])
+                    break    
+                val = allCC.pop(0)
+                percentiles[spec].append(1.-i/(len(nullDist[spec])))                 
+                gtOrder[spec].append(val[1])
+ 
+        return (percentiles,gtOrder)              
+

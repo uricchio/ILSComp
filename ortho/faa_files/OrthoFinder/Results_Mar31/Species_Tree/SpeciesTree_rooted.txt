@@ -1,0 +1,1 @@
+(53503-Pc.singCopy:1,uniProt.taxonomy_id_500485:1);

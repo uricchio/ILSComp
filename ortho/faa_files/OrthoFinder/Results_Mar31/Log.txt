@@ -1,0 +1,12 @@
+2023-03-31 12:14:21 : Started OrthoFinder version 2.5.4
+Command Line: orthofinder -f faa_files/
+
+WorkingDirectory_Base: /cluster/tufts/uricchiolab/luricc01/ILSsims/ortho/faa_files/OrthoFinder/Results_Mar31/WorkingDirectory/
+
+Species used: 
+0: 53503-Pc.singCopy.faa
+1: uniProt.taxonomy_id_500485.faa
+
+FN_Orthogroups: /cluster/tufts/uricchiolab/luricc01/ILSsims/ortho/faa_files/OrthoFinder/Results_Mar31/WorkingDirectory/clusters_OrthoFinder_I1.5.txt_id_pairs.txt
+WorkingDirectory_Trees: /cluster/tufts/uricchiolab/luricc01/ILSsims/ortho/faa_files/OrthoFinder/Results_Mar31/WorkingDirectory/
+2023-03-31 12:21:54 : OrthoFinder run completed
