@@ -1,0 +1,4 @@
+"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Gene ID(s)"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
+"03030"	"DNA replication"	"Genetic Information Processing"	"Pc12g04440 | Pc13g07420 | Pc16g10450 | Pc20g14580 | Pc21g10710 | Pc21g11440 | Pc21g15650 | Pc21g21700"	"0.0006394325"	"0.03580822"	"8 / 24"	"8 / 276"
+"04145"	"Phagosome"	"Cellular Processes"	"Pc13g08280 | Pc13g14670 | Pc16g09660 | Pc18g01990 | Pc20g02810 | Pc21g12120"	"0.005832991"	"0.1633238"	"6 / 20"	"6 / 276"
+"03430"	"Mismatch repair"	"Genetic Information Processing"	"Pc12g04440 | Pc13g07420 | Pc20g14580 | Pc21g11440 | Pc21g21700"	"0.0130423"	"0.2434563"	"5 / 17"	"5 / 276"

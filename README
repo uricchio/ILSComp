@@ -12,7 +12,10 @@ Gene tree files are stored in obsData/Gene_Trees
 
 Sequence data is available in obsData/Single_Copy_Orthologue_Sequences
 
-RCC values (competitive index) are available in obsData/RCCdata.txt. We averaged the three replicates per pair for analyses in our study.
+Output from FungiFun v.2 (tests for pathway enrichment) is available in enrichOut in CSV format. 
 
-Orthologs have ID numbers in the file names that correspond to the numbers in our manuscript.
+RCC values (competitive index) are available in obsData/RCCdata.txt. The three distinct numbers per species pair represent experimental replicates. We averaged the three replicates per pair for analyses in our study.
+
+Orthologs have ID numbers in the file names that correspond to the Orthogroup/Gene numbers in Tables 1 and S1 in our manuscript. The Gene ID numbers 
+in Table S4 correspond to the IDs in the Penicillium chrysogenum reference genome (taxonomy ID 500485), available at uniprot.org/uniprotkb?query=(taxonomy_id:500485). 
 

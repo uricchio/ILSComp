@@ -48,3 +48,18 @@
 #python getQuantiles.py ../obsData/corrPvalDistCorrBtwn.txt 0.01 4 
 #python getQuantiles.py ../obsData/corrPvalDistCorrBtwn.txt 0.05 3 
 #python getQuantiles.py ../obsData/corrPvalDistCorrBtwn.txt 0.05 4 
+
+#making enrichment gene sets for kegg analysis
+cat ../../../QQplotData.txt | awk '{if($4 < 0.005) print $3}' | sort | uniq -c | awk '{if($1 > 0) print $2}' > ../obsData/compHits.plt0.005.1sp.txt 
+cat ../../../QQplotData.txt | awk '{if($4 < 0.0005) print $3}' | sort | uniq -c | awk '{if($1 > 0) print $2}' > ../obsData/compHits.plt0.0005.1sp.txt 
+cat ../../../QQplotData.txt | awk '{if($4 < 0.05) print $3}' | sort | uniq -c | awk '{if($1 > 2) print $2}' > ../obsData/compHits.plt0.05.gt2sp.txt 
+cat ../../../QQplotData.txt | awk '{if($4 < 0.05) print $3}' | sort | uniq -c | awk '{if($1 > 3) print $2}' > ../obsData/compHits.plt0.05.gt3sp.txt 
+cat ../../../QQplotData.txt | awk '{if($4 < 0.01) print $3}' | sort | uniq -c | awk '{if($1 > 2) print $2}' > ../obsData/compHits.plt0.01.gt2sp.txt 
+cat ../../../QQplotData.txt | awk '{if($4 < 0.01) print $3}' | sort | uniq -c | awk '{if($1 > 3) print $2}' > ../obsData/compHits.plt0.01.gt3sp.txt 
+
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.005.1sp.txt > ../obsData/enrichment/compHits.plt0.005.1sp.txt
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.0005.1sp.txt > ../obsData/enrichment/compHits.plt0.0005.1sp.txt
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.05.gt2sp.txt > ../obsData/enrichment/compHits.plt0.05.gt2sp.txt
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.05.gt3sp.txt > ../obsData/enrichment/compHits.plt0.05.gt3sp.txt
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.01.gt2sp.txt > ../obsData/enrichment/compHits.plt0.01.gt2sp.txt
+python getIDs.py ../obsData/GeneMap.txt ../obsData/compHits.plt0.01.gt3sp.txt > ../obsData/enrichment/compHits.plt0.01.gt3sp.txt

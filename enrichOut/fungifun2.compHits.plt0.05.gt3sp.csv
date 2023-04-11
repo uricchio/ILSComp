@@ -1,0 +1,5 @@
+"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Gene ID(s)"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
+"03430"	"Mismatch repair"	"Genetic Information Processing"	"Pc20g14580 | Pc21g21700"	"0.01857454"	"0.1672918"	"2 / 17"	"2 / 54"
+"03040"	"Spliceosome"	"Genetic Information Processing"	"Pc16g04930 | Pc20g09280 | Pc22g04980"	"0.02521325"	"0.1672918"	"3 / 52"	"3 / 54"
+"03030"	"DNA replication"	"Genetic Information Processing"	"Pc20g14580 | Pc21g21700"	"0.03584823"	"0.1672918"	"2 / 24"	"2 / 54"
+"03420"	"Nucleotide excision repair"	"Genetic Information Processing"	"Pc20g14580 | Pc21g21700"	"0.05744045"	"0.2010416"	"2 / 31"	"2 / 54"

@@ -1,0 +1,2 @@
+"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Gene ID(s)"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
+"04145"	"Phagosome"	"Cellular Processes"	"Pc13g08280 | Pc13g14670 | Pc15g00440 | Pc16g09660 | Pc20g02810 | Pc21g12120"	"0.002607137"	"0.1225354"	"6 / 20"	"6 / 207"
