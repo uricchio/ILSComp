@@ -15,11 +15,3 @@ for i in range(len(infVals)):
     print (popSizeArr[2:-10][i], infVals[i])
 
 
-#mySim.setPopSize()
-#mySim.initRandomTree()
-#mySim.makeTaxonMap()
-#mySim.simGeneTree()
-#mySim.simCausalGene()
-#mySim.writeSpecTree()
-#mySim.makeOutputHeader()
-#mySim.runNullSims()

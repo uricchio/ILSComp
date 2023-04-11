@@ -25,11 +25,3 @@ for sp in mySim.nullCorr:
     for val in mySim.nullCorr[sp]:
         print(sp[1:-1], val)
 
-#mySim.setPopSize()
-#mySim.initRandomTree()
-#mySim.makeTaxonMap()
-#mySim.simGeneTree()
-#mySim.simCausalGene()
-#mySim.writeSpecTree()
-#mySim.makeOutputHeader()
-#mySim.runNullSims()

@@ -19,3 +19,13 @@ RCC values (competitive index) are available in obsData/RCCdata.txt. The three d
 Orthologs have ID numbers in the file names that correspond to the Orthogroup/Gene numbers in Tables 1 and S1 in our manuscript. The Gene ID numbers 
 in Table S4 correspond to the IDs in the Penicillium chrysogenum reference genome (taxonomy ID 500485), available at uniprot.org/uniprotkb?query=(taxonomy_id:500485). 
 
+#PLOTS - note that the filepaths may need adjustment to run any of this code on your machine
+
+Figure 1 is a conceptual figure, we do not provide code to recreate it.
+
+To remake Figure 2, run the code in conceptPlot/DiscordanceNullPower.R
+
+To remake Figures 3 and 4, run the code in conceptPlot/NullandEmpRDist.R
+
+To remake Figure 5, run the code in conceptPlot/CorrGeneOfInt.R
+
