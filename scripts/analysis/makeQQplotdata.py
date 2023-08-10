@@ -2,7 +2,7 @@ import sys
 
 
 # command:
-# python makeQQplotdata.py ~/projects/ILSSims/ILSsims/obsData/corrPvalDist.txt ~/projects/ILSSims/ILSsims/obsData/realPvalDist.txt  > ~/projects/ILSSims/ILSsims/obsData/corrPvalDistReal.txt > ~/projects/ILSSims/ILSsims/obsData/QQplotData.txt
+# python makeQQplotdata.py ~/projects/ILSSims/ILSsims/obsData/corrPvalDist.txt ~/projects/ILSSims/ILSsims/obsData/realPvalDist.txt > ~/projects/ILSSims/ILSsims/obsData/QQplotData.txt
 
 # read in null corr coeffs
 # store array for each species and sort to get pVals

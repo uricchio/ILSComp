@@ -3,8 +3,6 @@ library(geiger)
 library(nlme)
 library(phytools)
 
-
-
 # function to read in PGLS data
 readAndDoPGLS<-function(n,i) {
   
@@ -149,11 +147,11 @@ ROCdf<-rbind(hROC,mROC,lROC)
 plE<-ggplot(ROCdf,aes(x,c,color=discordance))+geom_line(lwd=1.3)+xlab("FPR")+ylab("TPR")+theme_classic()+scale_color_manual(values=wes_palette("Darjeeling1"))
 plE
 
-bottom_row<-plot_grid(plD,plE,labels=c("D","E"),ncol=2)
+bottom_row<-plot_grid(plD,plE,labels=c("D","E"),ncol=2,rel_heights = c(0.7,1))
 
 plot_grid(top_row,bottom_row,ncol=1)
 
-ggsave("~/projects/ILSSims/ILSsims/conceptPlot/FigS1.pdf",width=10,height=6.4)
+ggsave("~/projects/ILSSims/ILSsims/conceptPlot/FigS1.pdf",width=10,height=5)
 
 
 

@@ -1,11 +1,16 @@
 
+library(wesanderson)
+library(ggplot2)
+library(cowplot)
+
 # get the corrected sumStat dist
 read.table("~/projects/ILSSims/ILSsims/obsData/corrPvalDist.txt")->data
-
 # get the obs sumStat dist
 read.table("~/projects/ILSSims/ILSsims/obsData/realPvalDist.txt")->dataR
 
 myData<-rbind(data.frame(r=dataR$V1,species=dataR$V3,type="Observed"),data.frame(r=data$V2,species=data$V1,type="Null"))
+
+
 
 # plot of each species with its null dist and obs dist
 
@@ -53,7 +58,7 @@ plH<-ggplot(data=myData[myData$species=='Penicillium-verrucosum',],aes(r,color=t
 
 plot_grid(plA,plB,plC,plD,plE,plF,plG,plH,labels=c("A","B","C","D","E","F","G","H"),nrow = 3)
 
-ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig4.pdf",height=7.5,width=14*(7.5/9))
+ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig3.pdf",height=7.5,width=14*(7.5/9))
 
 
 # qqplots
@@ -73,4 +78,4 @@ plB<-ggplot(data=QQ,aes(-log10(V5),-log10(V4),color=V1))+geom_point()+geom_line(
 
 plot_grid(plA,plB,labels=c("A","B"),rel_widths = c(1,1.7))
 
-ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig5.pdf",height=3,width=9)
+ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig4.pdf",height=3,width=9)

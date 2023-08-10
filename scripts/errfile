@@ -1,0 +1,4 @@
+/cluster/tufts/software/anaconda3/lib/python3.6/site-packages/scipy/stats/_stats_mstats_common.py:130: RuntimeWarning: invalid value encountered in double_scalars
+  slope = r_num / ssxm
+/cluster/tufts/software/anaconda3/lib/python3.6/site-packages/scipy/stats/_stats_mstats_common.py:142: RuntimeWarning: divide by zero encountered in double_scalars
+  sterrest = np.sqrt((1 - r**2) * ssym / ssxm / df)

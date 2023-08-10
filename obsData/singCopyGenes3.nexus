@@ -1,0 +1,24 @@
+#NEXUS
+Begin data;
+    dimension ngene=3 ntaxa=8;
+    Format tree=rooted outgroup=Penicillium-cvjetkovicii;
+    matrix
+    Penicillium-mb   1    Penicillium-mb
+    Penicillium-polonicum 1 Penicillium-polonicum
+    Penicillium-commune 1 Penicillium-commune
+    Penicillium-solitum 1 Penicillium-solitum
+    Penicillium-verrucosum 1 Penicillium-verrucosum
+    Penicillium-chrysogenum 1 Penicillium-chrysogenum
+    Penicillium-brevicompactum 1 Penicillium-brevicompactum
+    Penicillium-cvjetkovicii 1 Penicillium-cvjetkovicii
+    ;
+End;
+
+Begin trees;
+
+(Penicillium-cvjetkovicii:0.0684155,(Penicillium-brevicompactum:0.064676,((Penicillium-solitum:0.038869,Penicillium-commune:0.057134):0.283256,(Penicillium-chrysogenum:0.036785,(Penicillium-verrucosum:0.024741,(Penicillium-mb:7.0982e-07,Penicillium-polonicum:0.000495):0.011054):0.00422):0.027052):0.024716):0.0684155);
+(Penicillium-cvjetkovicii:0.0684155,(Penicillium-brevicompactum:0.064676,((Penicillium-solitum:0.038869,Penicillium-commune:0.057134):0.283256,(Penicillium-chrysogenum:0.036785,(Penicillium-verrucosum:0.024741,(Penicillium-mb:7.0982e-07,Penicillium-polonicum:0.000495):0.011054):0.00422):0.027052):0.024716):0.0684155);
+(Penicillium-cvjetkovicii:0.0684155,(Penicillium-brevicompactum:0.064676,((Penicillium-solitum:0.038869,Penicillium-commune:0.057134):0.283256,(Penicillium-chrysogenum:0.036785,(Penicillium-verrucosum:0.024741,(Penicillium-mb:7.0982e-07,Penicillium-polonicum:0.000495):0.011054):0.00422):0.027052):0.024716):0.0684155);
+end;
+
+
