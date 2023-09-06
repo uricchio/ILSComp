@@ -8,11 +8,11 @@ The source code is available in the src folder. You can install it by running "p
 Once you've installed the source, the code in the scripts folder implements the analyses in the figures. The visualizations were made using ggplot and code for these is available in the conceptPlot folder. To rerun all the analyses, uncomment the lines in scripts/run_disc_sims.sh and rerun all the code. Note that this is not gauranteed to work without some modification as the filepaths to some of the data may be different on your machine. 
 
 #DATA
-Gene tree files are stored in obsData/Gene_Trees
+Gene tree files for the eight penicillium species are stored in obsData/Gene_Trees
 
-Sequence data is available in obsData/Single_Copy_Orthologue_Sequences
+Sequence data corresponding to these trees is available in obsData/Single_Copy_Orthologue_Sequences
 
-Output from FungiFun v.2 (tests for pathway enrichment) is available in enrichOut in CSV format. 
+Output from FungiFun v.2 (tests for pathway enrichment) is available in the folder obsData/enrichment in CSV format. Files in the folder enrichOut are deprecated and not used in the most recent version of our analysis. 
 
 RCC values (competitive index) are available in obsData/RCCdata.txt. The three distinct numbers per species pair represent experimental replicates. We averaged the three replicates per pair for analyses in our study.
 
@@ -28,4 +28,6 @@ To remake Figure 2, run the code in conceptPlot/DiscordanceNullPower.R
 To remake Figures 3 and 4, run the code in conceptPlot/NullandEmpRDist.R
 
 To remake Figure 5, run the code in conceptPlot/CorrGeneOfInt.R
+
+
 
