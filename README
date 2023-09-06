@@ -29,5 +29,10 @@ To remake Figures 3 and 4, run the code in conceptPlot/NullandEmpRDist.R
 
 To remake Figure 5, run the code in conceptPlot/CorrGeneOfInt.R
 
+#Scripts and python code
+Command lines corresponding to each the underlying analyses for these figures are included in scripts/run_disc_sims.sh. To run part of the analysis, uncomment the corresponding line and execute the script as ./run_disc_sims.sh while inside the scripts directory.
+
+The source code for our simulations is stored in src/coalAssoc/simAndInfer.py
+
 
 
