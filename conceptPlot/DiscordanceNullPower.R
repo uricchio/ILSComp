@@ -126,6 +126,6 @@ plE
 
 bottom_row<-plot_grid(plD,plE,labels=c("D","E"),ncol=2)
 
-plot_grid(top_row,bottom_row,ncol=1)
+plot_grid(top_row,bottom_row,ncol=1,rel_heights=c(0.7,0.9))
 
-ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig2.pdf",width=10,height=6.4)
+ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig2.pdf",width=10,height=5)

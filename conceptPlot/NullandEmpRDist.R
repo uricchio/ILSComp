@@ -8,8 +8,14 @@ read.table("~/projects/ILSSims/ILSsims/obsData/corrPvalDist.txt")->data
 # get the obs sumStat dist
 read.table("~/projects/ILSSims/ILSsims/obsData/realPvalDist.txt")->dataR
 
-myData<-rbind(data.frame(r=dataR$V1,species=dataR$V3,type="Observed"),data.frame(r=data$V2,species=data$V1,type="Null"))
+data$V1<-replace(data$V1, data$V1 =="Penicillium-mb", "Penicillium-SP-mb")
+data$V1<-replace(data$V1, data$V1 =="Penicillium-commune", "Penicillium-bioforme")
 
+dataR$V3<-replace(dataR$V3, dataR$V3 =="Penicillium-mb", "Penicillium-SP-mb")
+dataR$V3<-replace(dataR$V3, dataR$V3 =="Penicillium-commune", "Penicillium-bioforme")
+
+
+myData<-rbind(data.frame(r=dataR$V1,species=dataR$V3,type="Observed"),data.frame(r=data$V2,species=data$V1,type="Null"))
 
 
 # plot of each species with its null dist and obs dist
@@ -26,20 +32,20 @@ plB<-ggplot(data=myData[myData$species=='Penicillium-chrysogenum',],aes(r,color=
   scale_fill_manual(values=c("lightgray",myPal[2]),name="") + 
   scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-chrysogenum")
 
-plC<-ggplot(data=myData[myData$species=='Penicillium-commune',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
+plC<-ggplot(data=myData[myData$species=='Penicillium-bioforme',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
   scale_color_manual(values=c("lightgray",myPal[3]),name="")+
   scale_fill_manual(values=c("lightgray",myPal[3]),name="") + 
-  scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-commune")
+  scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-bioforme")
 
 plD<-ggplot(data=myData[myData$species=='Penicillium-cvjetkovicii',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
   scale_color_manual(values=c("lightgray",myPal[4]),name="")+
   scale_fill_manual(values=c("lightgray",myPal[4]),name="") + 
   scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-cvjetkovicii")
 
-plE<-ggplot(data=myData[myData$species=='Penicillium-mb',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
+plE<-ggplot(data=myData[myData$species=='Penicillium-SP-mb',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
   scale_color_manual(values=c("lightgray",myPal[5]),name="")+
   scale_fill_manual(values=c("lightgray",myPal[5]),name="") + 
-  scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-mb")
+  scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("Correlation coefficient") +ggtitle("Penicillium-SP-mb")
 
 plF<-ggplot(data=myData[myData$species=='Penicillium-polonicum',],aes(r,color=type,fill=type,alpha=type))+geom_density()+theme_classic()+ylab("probability density")+
   scale_color_manual(values=c("lightgray",myPal[6]),name="")+
@@ -63,6 +69,9 @@ ggsave("~/projects/ILSSims/ILSsims/conceptPlot/Fig3.pdf",height=7.5,width=14*(7.
 
 # qqplots
 read.table("~/projects/ILSSims/ILSsims/obsData/QQplotData.txt")->QQ
+
+QQ$V1<-replace(QQ$V1, QQ$V1 =="Penicillium-mb", "Penicillium-SP-mb")
+QQ$V1<-replace(QQ$V1, QQ$V1 =="Penicillium-commune", "Penicillium-bioforme")
 
 # uncorrected
 plA<-ggplot(data=QQ,aes(-log10(V5),-log10(V6),color=V1))+geom_point()+geom_line() +

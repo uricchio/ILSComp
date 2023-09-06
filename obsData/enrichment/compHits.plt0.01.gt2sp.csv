@@ -1,0 +1,8 @@
+"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Gene ID(s)"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
+"00513"	"Various types of N-glycan biosynthesis"	"Metabolism"	"Pc16g12320"	"0.05775736"	"0.2056067"	"1 / 11"	"1 / 17"
+"04011"	"MAPK signaling pathway - yeast"	"Environmental Information Processing"	"Pc16g10360"	"0.0780855"	"0.2056067"	"1 / 15"	"1 / 17"
+"00510"	"N-Glycan biosynthesis"	"Metabolism"	"Pc16g12320"	"0.08811714"	"0.2056067"	"1 / 17"	"1 / 17"
+"04120"	"Ubiquitin mediated proteolysis"	"Genetic Information Processing"	"Pc12g08100"	"0.136974"	"0.2397046"	"1 / 27"	"1 / 17"
+"00240"	"Pyrimidine metabolism"	"Metabolism"	"Pc15g00490"	"0.1973336"	"0.2762671"	"1 / 40"	"1 / 17"
+"03010"	"Ribosome"	"Genetic Information Processing"	"Pc22g19050"	"0.3198564"	"0.3731658"	"1 / 69"	"1 / 17"
+"01100"	"Metabolic pathways"	"Metabolism"	"Pc15g00490 | Pc16g12320"	"0.5695164"	"0.5695164"	"2 / 325"	"2 / 17"

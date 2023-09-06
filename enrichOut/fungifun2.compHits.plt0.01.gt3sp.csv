@@ -1,2 +1,2 @@
-"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Gene ID(s)"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
-"04120"	"Ubiquitin mediated proteolysis"	"Genetic Information Processing"	"Pc12g08100"	"0.02896996"	"0.02896996"	"1 / 27"	"1 / 1"
+"KEGG pathway ID"	"KEGG pathway name"	"KEGG main category"	"Exact p-value"	"Adjusted p-value"	"# genes / category"	"# genes / input"
+"04120"	"Ubiquitin mediated proteolysis"	"Genetic Information Processing"	"0.02896996"	"0.02896996"	"1 / 27"	"1 / 1"
