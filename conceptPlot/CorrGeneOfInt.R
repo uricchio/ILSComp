@@ -1,6 +1,8 @@
 library(ggplot2)
 library(wesanderson)
 
+
+# first we read in the data for the trait values and 
 read.table("~/projects/ILSSims/ILSsims/obsData/corr.5719.txt")->data
 myPal<-wes_palette("Zissou1", 8, type = "continuous")
 

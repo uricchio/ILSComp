@@ -1,3 +1,14 @@
-Tree figure made with https://uglytrees.nz/
+#PLOTS - note that the filepaths may need adjustment to run any of this code on your machine
 
-https://academic.oup.com/bioinformatics/article/37/2/268/5876824
+Figure 1 is a conceptual figure, we do not provide code to recreate it.
+
+To remake Figure 2, run the code in DiscordanceNullPower.R
+
+To remake Figures 3 and 4, run the code in NullandEmpRDist.R
+
+To remake Figure 5, run the code in Fig5Updated.R
+
+Numerous other scripts are included in this folder that did not get included in the final manuscript, but may include some analyses of interest to some users.
+
+In general you may need to change some filepaths to adjust for the local structure of your filesystem and/or the location of your home directory.
+Hopefully this is typically clear based on the error messages you will receive, but you are welcome to contact us if we can be helpful in any way.

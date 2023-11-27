@@ -1,11 +1,12 @@
 #CODE
-This software implements analyses in Louw et al 2023.
+This software implements analyses in Louw et al 2023, "A phyloghenomic perspective on interspecific competition", forthcoming in Ecology Letters. The biorxiv preprint of the 
+corresponding manuscript is available at https://www.biorxiv.org/content/10.1101/2023.05.11.540388v3
 
 The code requires DendroPy to run most of the analyses: https://dendropy.org/
 
 The source code is available in the src folder. You can install it by running "python setup.py install --user" from the command line.
 
-Once you've installed the source, the code in the scripts folder implements the analyses in the figures. The visualizations were made using ggplot and code for these is available in the conceptPlot folder. To rerun all the analyses, uncomment the lines in scripts/run_disc_sims.sh and rerun all the code. Note that this is not gauranteed to work without some modification as the filepaths to some of the data may be different on your machine. 
+Once you've installed the source, the code in the scripts folder implements the analyses in the figures. The visualizations were made using ggplot and code for these is available in the conceptPlot folder. To rerun all the analyses, uncomment the lines in scripts/run_disc_sims.sh and rerun all the code. Note that this is not gauranteed to work without some modification as the filepaths for some of the data files may be different on your machine. 
 
 #DATA
 Gene tree files for the eight penicillium species are stored in obsData/Gene_Trees
@@ -27,10 +28,14 @@ To remake Figure 2, run the code in conceptPlot/DiscordanceNullPower.R
 
 To remake Figures 3 and 4, run the code in conceptPlot/NullandEmpRDist.R
 
-To remake Figure 5, run the code in conceptPlot/CorrGeneOfInt.R
+To remake Figure 5, run the code in conceptPlot/Fig5Updated.R
+
+In general you may need to change some filepaths to adjust for the local structure of your filesystem and/or the location of your home directory. 
+Hopefully this is typically clear based on the error messages you will receive, but you are welcome to contact us if we can be helpful in any way.
 
 #Scripts and python code
-Command lines corresponding to each the underlying analyses for these figures are included in scripts/run_disc_sims.sh. To run part of the analysis, uncomment the corresponding line and execute the script as ./run_disc_sims.sh while inside the scripts directory.
+Command lines corresponding to each the underlying analyses for these figures are included in scripts/run_disc_sims.sh. To run part of the analysis, 
+uncomment the corresponding line and execute the script as ./run_disc_sims.sh while inside the scripts directory.
 
 The source code for our simulations is stored in src/coalAssoc/simAndInfer.py
 

@@ -2,6 +2,18 @@ library(ggplot2)
 library(cowplot)
 library(wesanderson)
 
+# this script was used to generate Figure 2 of Louw et al 2023, https://www.biorxiv.org/content/10.1101/2023.05.11.540388v3
+# the main objective of this figure is to visualize the statistical performance of naive correlation-based methods for 
+# determining genomic loci at which the local phylogeny is correlated with trait values
+
+# the first few functions in this file read in data from simulations, including naive correlation coefficients (rho) and p-values
+# We considered three different parameter regimes, corresponding to extremely high discordance (highDiscPNull and highDiscPTrue),
+# very low discordance (lowDiscPNull and lowDiscPTrue) , and intermediate levels of discordance (midDiscPNull and midDiscPTrue).
+
+# The null distributions correspond to distributions of p-values and correlation coefficients for genes that are not causal for 
+# interspecific trait differences, but share a common phylogenetic tree with a causal gene. The "true" distributions are distributions 
+# of p-values for genes that are causal for trait differences
+
 # make function to read in files and store pvals and rho values
 
 readFiles<-function(fn,i) {
@@ -33,6 +45,8 @@ midDiscPTrue = data.frame()
 highDiscPNull = data.frame()
 highDiscPTrue = data.frame()
 
+# we performed 1000 sets of simulations for each scenario, each of which is read and bound to the corresponding data frame 
+
 for (i in seq(1,1000)) {
   lowDiscPNull = rbind(lowDiscPNull,readFiles("lowDiscP",i))
   lowDiscPTrue = rbind(lowDiscPTrue,data.frame(p=getTrueP("lowDiscP",i), r=getTrueR("lowDiscP",i),spec =getTrueSpec("lowDiscP",i), val="true"))
@@ -56,6 +70,9 @@ lowDiscP = rbind(lowDiscPNull,lowDiscPTrue)
 
 #
 
+# we subset the values corresponding to Penicillium-commune for visualization purposes, as each species has its own null distribution that depends on its position
+# within the species tree
+
 highDiscP<-highDiscP[highDiscP$spec=="Penicillium-commune",]
 midDiscP<-midDiscP[midDiscP$spec=="Penicillium-commune",]
 lowDiscP<-lowDiscP[lowDiscP$spec=="Penicillium-commune",]
@@ -75,8 +92,12 @@ plA<-ggplot(data=highDiscP,aes(p,color=val,fill=val,alpha=val))+geom_density()+t
   scale_fill_manual(values=c("lightgray",wes_palette("Darjeeling1")[1]),name="") + 
   scale_alpha_manual(values=c(1,0.4),guide="none")+ xlab("p-value") + theme(legend.position = "none")+ggtitle("High")
 
+# here we generate panels demonstrating the distribution of p-values for each model (high, low, and mid)
+
 top_row<-plot_grid(plA,plB,plC, labels=c("A","B","C"),ncol=3)
 
+
+# now we plot qq (quantile-quantile) plots and ROC (receiver-operator curves) as summaries of the data 
 
 # QQ plot
 makeQQ<-function(df) {
